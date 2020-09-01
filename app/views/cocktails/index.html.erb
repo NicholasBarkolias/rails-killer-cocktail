@@ -1,0 +1,17 @@
+<div class="banner">
+  <%=  image_tag 'background.jpeg', id: 'background'%>
+</div>
+
+<div class="grid">
+  <% @cocktails.each do |cocktail|%>
+    <%= link_to cocktail_path(cocktail) do %>
+  <div class="cards">
+    <div class="image">
+
+    </div>
+      <h2><%= cocktail.name %> </h2>
+  </div>
+    <% end %>
+  <% end %>
+</div>
+
