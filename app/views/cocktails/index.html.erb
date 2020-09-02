@@ -5,13 +5,19 @@
 <div class="grid">
   <% @cocktails.each do |cocktail|%>
     <%= link_to cocktail_path(cocktail) do %>
-  <div class="cards">
-    <div class="image">
-
-    </div>
-      <h2><%= cocktail.name %> </h2>
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="<%= cl_image_path cocktail.photo.key, height: 300, width: 300, crop: :fill %>" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-text"><%= cocktail.name %></h2>
   </div>
+</div>
     <% end %>
   <% end %>
 </div>
 
+<!--  <div class="cards" >
+    <%#= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="container">
+        <h2><%#= cocktail.name %> </h2>
+      </div>
+  </div> -->
