@@ -34,12 +34,23 @@
   margin: 0;
   border: 1px solid #191919;
   background-color: #f4f4f4;
-
+  border-radius: 8px;
+  height: 300px;
 }
 
+.card-img-top {
+  height: 75%;
+  width: 100%;
+  border-bottom: 2px solid gray;
+}
+.card-body {
+  background: $light-gray;
+  align-items: center;
+  justify-content: center;
+}
 
 .card-text {
-  color: black;
+  color: $base;
   font-family: 'Hind Siliguri', sans-serif;
   text-align: center;
 }

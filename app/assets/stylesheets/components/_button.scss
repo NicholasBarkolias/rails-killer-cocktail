@@ -1,4 +1,10 @@
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+
 .button {
+  border: 1px solid $light-gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,4 +21,21 @@
       text-decoration: none;
       color: white;
     }
+}
+
+
+.upload-photo {
+  border: 1px solid $light-gray;
+  border-radius: 16px;
+  padding: 4px 16px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  // font-weight: 500;
+  font-family: $button-font;
+  border-radius: 2px;
+  color: $light-gray;
+}
+
+#back {
+  border: 0;
 }

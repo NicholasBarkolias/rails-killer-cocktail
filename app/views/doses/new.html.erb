@@ -1,7 +1,10 @@
-<%= link_to 'Back to cocktail', cocktail_path(@cocktail), class: 'button' %>
+<%= link_to 'Back to cocktail', cocktail_path(@cocktail), class: 'button', id: 'back' %>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description %>
-  <%= f.button :submit, class: 'button', id: 'modify' %>
-<% end %>
+<div class="dose-form">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+    <%#= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+    <%= f.button :submit, class: 'button', id: 'modify' %>
+  <% end %>
+</div>
