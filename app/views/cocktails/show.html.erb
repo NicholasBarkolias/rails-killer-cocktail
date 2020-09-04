@@ -1,21 +1,18 @@
 <% if @cocktail.photo.attached? %>
-  <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill %>
-  <% else %>
-    <%= image_tag 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80', height: 450, width: 600, crop: :fill, class: "show-image" %>
-  <% end %>
+<%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill %>
+<% else %>
+<%= image_tag 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80', height: 450, width: 600, crop: :fill, class: "show-image" %>
+<% end %>
 
 <div class="cocktail-show">
   <h1 class="writing"><%= @cocktail.name %></h1>
   <% @cocktail.doses.each do |dose|%>
-   <h5 ><%= dose.ingredient.name %> <%= dose.description %> &nbsp &nbsp &nbsp &nbsp
-   <%= link_to  dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <i class= "far fa-trash-alt"></i>
-   <% end %> </h5>
+  <h5><%= dose.ingredient.name %> <%= dose.description %> &nbsp &nbsp &nbsp &nbsp
+    <%= link_to  dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="far fa-trash-alt"></i>
+    <% end %> </h5>
   <% end %>
   <div id="add-ingredients">
     <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: 'button'%>
   </div>
 </div>
-
-
-

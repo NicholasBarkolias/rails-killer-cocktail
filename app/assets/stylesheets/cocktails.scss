@@ -3,75 +3,71 @@
 @import "config/bootstrap_variables";
 
 #background {
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-position: 50% 50%;
 }
 
 .nav {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid white;
-  width: 100%;
-  background-color: $base;
-  color: white;
-  position: sticky;
-  top: 0;
-  overflow: visible;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid white;
+	width: 100%;
+	background-color: $base;
+	color: white;
+	position: sticky;
+	top: 0;
+	overflow: visible;
 
-    h1 {
-      color: #F4F4F4;
-      font-family: 'Yellowtail', cursive;
-      padding: 8px;
-      margin: 0;
-
-    }
+	h1 {
+		color: #f4f4f4;
+		font-family: "Yellowtail", cursive;
+		padding: 8px;
+		margin: 0;
+	}
 }
 
-
 .banner {
-  width: 100%;
-  margin-bottom: 1rem;
+	width: 100%;
+	margin-bottom: 1rem;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-  margin: 2rem;
-  grid-gap: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px;
+	margin: 2rem;
+	grid-gap: 2rem;
 }
 
 #search-form {
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  margin-top: 4px;
-  margin-right: 2rem;
+	font-size: 28px;
+	display: flex;
+	align-items: center;
+	margin-top: 4px;
+	margin-right: 2rem;
 }
 
 #image-upload {
-  font-size: 32px;
-
+	font-size: 32px;
 }
 
-
 .show-image {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .cocktail-show {
-  border-top: 1px solid $light-gray;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // text-align: center;
+	border-top: 1px solid $light-gray;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// text-align: center;
 }
 
 #add-ingredients {
-  width: 200px;
+	width: 200px;
 }

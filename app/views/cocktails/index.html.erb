@@ -4,24 +4,17 @@
 
 <div class="grid">
   <% @cocktails.each do |cocktail|%>
-    <%= link_to cocktail_path(cocktail) do %>
-    <div class="card" style="width: 18rem;">
+  <%= link_to cocktail_path(cocktail) do %>
+  <div class="card" style="width: 18rem;">
     <% if cocktail.photo.attached? %>
-  <img class="card-img-top" src="<%= cl_image_path cocktail.photo.key, height: 300, width: 250, crop: :fill %>" alt="Card image cap">
-  <% else %>
+    <img class="card-img-top" src="<%= cl_image_path cocktail.photo.key, height: 300, width: 250, crop: :fill %>" alt="Card image cap">
+    <% else %>
     <img class="card-img-top" src="<%= image_path 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80', height: 300, width: 250, crop: :fill %>" alt="Card image cap">
     <% end %>
-  <div class="card-body">
-    <h2 class="card-text"><%= cocktail.name %></h2>
+    <div class="card-body">
+      <h2 class="card-text"><%= cocktail.name %></h2>
+    </div>
   </div>
-</div>
-    <% end %>
+  <% end %>
   <% end %>
 </div>
-
-<!--  <div class="cards" >
-    <%#= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="container">
-        <h2><%#= cocktail.name %> </h2>
-      </div>
-  </div> -->
